@@ -1,8 +1,8 @@
 package app.at.angular.wrapper
 
-object Modules {
+object Modules : Decorators() {
 
-    fun <T> of(): dynamic {
-
+    override fun <T> of(): dynamic {
+        return null
     }
 }

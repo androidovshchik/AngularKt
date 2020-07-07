@@ -1,4 +1,4 @@
-package at.angular.core
+package at.angular.lib
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.BINARY)

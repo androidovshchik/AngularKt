@@ -1,8 +1,8 @@
 package app.at.angular.wrapper
 
-object Services {
+object Services : Decorators() {
 
-    fun <T> of(): dynamic {
-
+    override fun <T> of(): dynamic {
+        return null
     }
 }

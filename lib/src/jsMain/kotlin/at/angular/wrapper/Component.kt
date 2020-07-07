@@ -1,8 +1,14 @@
 package app.at.angular.wrapper
 
-object Components {
+import at.angular.core.Component
 
-    fun <T> of(): dynamic {
+object Components : Decorators() {
 
+    private val map = mapOf<String, Component>()
+
+    private val map2 = mapOf<String, Boolean>()
+
+    override fun <T> of(): dynamic {
+        return null
     }
 }
