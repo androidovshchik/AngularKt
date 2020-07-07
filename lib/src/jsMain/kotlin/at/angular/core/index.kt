@@ -1,4 +1,6 @@
-package kt.angular.core
+@file:JsModule("@angular/core")
+
+package at.angular.core
 
 import kotlin.js.Promise
 import kotlin.reflect.KClass
