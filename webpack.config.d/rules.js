@@ -1,4 +1,4 @@
-var moduleRules = [{
+const moduleRules = [{
     test: /\.html$/,
     use: [{
         loader: 'html-loader',

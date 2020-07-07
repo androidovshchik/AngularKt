@@ -34,6 +34,11 @@ dependencies {
     implementation(npm("@angular/platform-browser-dynamic", angular_version))
     implementation(npm("@angular/router", angular_version))
     implementation(npm("zone.js", "~0.10.3"))
+    implementation(npm("html-loader", "~1.1.0"))
+    implementation(npm("css-loader", "~3.6.0"))
+    implementation(npm("sass", "~1.26.10"))
+    implementation(npm("sass-loader", "~9.0.1"))
+    implementation(npm("file-loader", "~6.0.0"))
 }
 
 kotlin {
@@ -41,10 +46,6 @@ kotlin {
         main.kotlin.srcDirs = ['src']
     }
     target {
-        browser {
-            webpackTask {
-                output.libraryTarget = "umd"
-            }
-        }
+        browser {}
     }
 }
