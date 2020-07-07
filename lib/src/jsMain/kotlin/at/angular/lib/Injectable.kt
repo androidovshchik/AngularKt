@@ -1,6 +1,6 @@
-package app.at.angular.wrapper
+package at.angular.lib
 
-object Modules : Decorators() {
+object Services : Collection() {
 
     override fun <T> of(): dynamic {
         return null
