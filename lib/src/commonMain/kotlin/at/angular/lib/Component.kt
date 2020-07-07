@@ -1,8 +1,6 @@
 package at.angular.lib
 
 @Target(AnnotationTarget.CLASS)
-@Retention(AnnotationRetention.BINARY)
-@MustBeDocumented
 annotation class Component(
     val selector: String = "",
     val templateUrl: String = "",

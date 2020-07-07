@@ -1,8 +1,6 @@
 package at.angular.lib
 
-@Target(AnnotationTarget.CLASS, AnnotationTarget.VALUE_PARAMETER)
-@Retention(AnnotationRetention.BINARY)
-@MustBeDocumented
+@Target(AnnotationTarget.CLASS)
 annotation class NgModule(
     val declarations: Array<String> = arrayOf()
 )
