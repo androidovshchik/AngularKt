@@ -1,4 +1,4 @@
-package at.angular.extension
+package at.angular.lib.extension
 
 inline fun <T> jsObject(init: T.() -> Unit): T {
     // todo Any?
