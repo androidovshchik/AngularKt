@@ -1,6 +1,6 @@
 package app.at.angular.wrapper
 
-object Services {
+object Modules {
 
     fun <T> of(): dynamic {
 
