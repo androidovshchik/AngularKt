@@ -8,5 +8,7 @@ abstract class Collection<V> {
         map[item.first] = item.second
     }
 
-    abstract fun <T> of(): dynamic
+    open fun <T> of(): dynamic {
+
+    }
 }

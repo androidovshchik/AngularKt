@@ -3,13 +3,15 @@
 package at.angular.core
 
 import kotlin.js.Promise
-import kotlin.reflect.KClass
 
 external fun enableProdMode()
 
 external interface PlatformRef {
 
-    fun <T : Any> bootstrapModule(moduleType: KClass<T>, compilerOptions: dynamic): Promise<dynamic>
+    fun <T : Any> bootstrapModule(
+        moduleType: JsClass<T>,
+        compilerOptions: dynamic
+    ): Promise<dynamic>
 }
 
 external interface Component {
@@ -19,3 +21,7 @@ external interface Component {
     val styleUrls: Array<String>
     val styles: Array<String>
 }
+
+external interface Module
+
+external interface Directive

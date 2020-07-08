@@ -6,7 +6,7 @@ object Modules : Collection() {
 
     }
 
-    override fun <T> of(): dynamic {
+    override fun <T> of(): JsClass<T> {
         return null
     }
 }
