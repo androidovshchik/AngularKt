@@ -1,6 +1,5 @@
 package at.angular.lib
 
 @Target(AnnotationTarget.CLASS)
-annotation class NgModule(
-    val declarations: Array<String> = arrayOf()
-)
+@Retention(AnnotationRetention.SOURCE)
+annotation class NgModule()
