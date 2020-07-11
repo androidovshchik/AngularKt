@@ -7,6 +7,5 @@ import kotlin.js.Promise
 external fun enableProdMode()
 
 external interface PlatformRef {
-
     fun <T : Any> bootstrapModule(moduleType: JsClass<out T>): Promise<dynamic>
 }
