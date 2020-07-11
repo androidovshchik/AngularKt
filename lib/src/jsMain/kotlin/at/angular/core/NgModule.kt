@@ -1,8 +1,6 @@
-@file:JsModule(MODULE_CORE)
+@file:JsModule(at.angular.MODULE_CORE)
 
 package at.angular.core
-
-import at.angular.MODULE_CORE
 
 external interface NgModule
 
