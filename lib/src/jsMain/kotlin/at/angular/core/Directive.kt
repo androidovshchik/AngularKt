@@ -6,5 +6,5 @@ external interface Directive {
     val selector: String?
 }
 
-external fun Directive(options: Directive): ClassBuilder
+external fun Directive(options: Directive)
 

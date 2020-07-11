@@ -8,8 +8,5 @@ external fun enableProdMode()
 
 external interface PlatformRef {
 
-    fun <T : Any> bootstrapModule(
-        moduleType: JsClass<out T>,
-        compilerOptions: dynamic
-    ): Promise<dynamic>
+    fun <T : Any> bootstrapModule(moduleType: JsClass<out T>): Promise<dynamic>
 }

@@ -6,4 +6,4 @@ external interface Injectable {
     val providedIn: dynamic
 }
 
-external fun Injectable(options: Injectable): ClassBuilder
+external fun Injectable(options: Injectable)

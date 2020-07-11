@@ -9,4 +9,4 @@ external interface Component : Directive {
     val styles: Array<String>?
 }
 
-external fun Component(options: Component): ClassBuilder
+external fun Component(options: Component)

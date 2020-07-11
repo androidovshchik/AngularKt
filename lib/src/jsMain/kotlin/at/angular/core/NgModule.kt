@@ -4,4 +4,4 @@ package at.angular.core
 
 external interface NgModule
 
-external fun NgModule(options: NgModule): ClassBuilder
+external fun NgModule(options: NgModule)
