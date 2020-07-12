@@ -1,4 +1,4 @@
-package at.angular.lib
+package at.angular.api
 
 /**
  * @see: https://angular.io/api/core/NgModule
