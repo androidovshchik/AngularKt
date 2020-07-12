@@ -1,4 +1,4 @@
-@file:JsModule(at.angular.MODULE_CORE)
+@file:JsModule("@angular/core")
 
 package at.angular.core
 
