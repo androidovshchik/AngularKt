@@ -2,8 +2,11 @@
 
 package at.angular.core
 
+/**
+ * @see: https://angular.io/api/core/ViewRef
+ */
 abstract external class ViewRef : ChangeDetectorRef {
-    val destroyed: Boolean
-    fun destroy()
-    fun onDestroy(callback: () -> Unit): Any
+    abstract val destroyed: Boolean
+    abstract fun destroy()
+    abstract fun onDestroy(callback: () -> Unit): Any
 }
