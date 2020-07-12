@@ -1,9 +1,12 @@
-@file:JsModule(at.angular.MODULE_CORE)
+@file:JsModule("@angular/core")
 
 package at.angular.core
 
+/**
+ * @see: https://angular.io/api/core/Injectable
+ */
 external interface Injectable {
     val providedIn: dynamic
 }
 
-external fun Injectable(options: Injectable)
+external fun Injectable(options: Injectable): (JsClass<*>) -> JsClass<*>
