@@ -2,7 +2,7 @@
 > Write Angular apps with pleasure on Kotlin :relaxed:
 
 Benefits:
-* Kotlin itself
+* Kotlin itself with no `;`, no `this`, `null` safety :sparkles:
 * Fully customizable webpack
 * Support of [Multiplatform Projects](https://kotlinlang.org/docs/reference/multiplatform.html)
 * Support of [kotlinx.coroutines][2], [Ktor][3], [kotlinx.serialization][4]
