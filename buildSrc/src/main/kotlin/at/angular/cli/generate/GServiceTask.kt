@@ -17,7 +17,7 @@ open class GServiceTask : GenerateTask() {
         """
     )
     @get:Input
-    override var className: String? = null
+    override var classPath = ""
 
     @set:Option(
         option = "flat", description = """
@@ -34,11 +34,8 @@ open class GServiceTask : GenerateTask() {
 
     override fun generate() {
         val code = readTemplate("name.service.txt")
-            .replace("NameService", "${className?.capitalize()}Service")
-        if (flat.toBoolean()) {
-            File(appDir, "$fileName.service.kt").writeText(code)
-        } else {
-
-        }
+            .replace("package app", "package app$packageName")
+            .replace("NameService", "${fileName.capitalize()}Service")
+        File(getClassDir(flat.toBoolean()), "$fileName.service.kt").writeText(code)
     }
 }

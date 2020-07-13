@@ -9,7 +9,7 @@ import java.io.File
  */
 abstract class GenerateTask : DefaultTask() {
 
-    protected abstract var className: String
+    protected abstract var classPath: String
 
     init {
         group = project.property("group").toString()
@@ -17,13 +17,16 @@ abstract class GenerateTask : DefaultTask() {
     }
 
     private val classParts: List<String>
-        get() = className.split("[\\\\/]".toRegex())
+        get() = classPath.split("[\\\\/]".toRegex())
 
     private val filePath: String
         get() = classParts.dropLast(1).joinToString("/")
 
-    protected val fileName: String?
-        get() = classParts.lastOrNull()?.decapitalize()
+    protected val fileName: String
+        get() = classParts.last().decapitalize()
+
+    protected val packageName: String
+        get() = classParts.dropLast(1).joinToString(".")
 
     @TaskAction
     open fun generate() {

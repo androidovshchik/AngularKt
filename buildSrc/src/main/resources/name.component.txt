@@ -1,3 +1,5 @@
+package app
+
 import at.angular.core.OnInit
 import at.angular.lib.Component
 

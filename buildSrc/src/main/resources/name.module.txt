@@ -1,3 +1,5 @@
+package app
+
 import at.angular.common.CommonModule
 import at.angular.lib.NgModule
 import at.angular.lib.NgModuleKt
