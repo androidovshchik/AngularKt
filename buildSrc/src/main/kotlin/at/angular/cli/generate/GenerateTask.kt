@@ -6,7 +6,7 @@ import java.io.File
 
 abstract class GenerateTask : DefaultTask() {
 
-    abstract var className: String
+    abstract var className: String?
 
     val srcDir: File
         get() = File(project.projectDir, "src").apply { mkdir() }
