@@ -1,4 +1,4 @@
-## @AngularKt
+# @AngularKt
 > Write Angular apps with pleasure on Kotlin :relaxed:
 
 Benefits:
@@ -10,10 +10,10 @@ Benefits:
 
 [1]: https://kotlinlang.org/docs/reference/multiplatform.html
 [2]: https://github.com/Kotlin/kotlinx.coroutines
-[3]: https://ktor.io
+[3]: https://ktor.io/clients/http-client/multiplatform.html
 [4]: https://github.com/Kotlin/kotlinx.serialization
 
-### Quick example
+## Quick example
 ```kotlin
 @Component(
     selector = "app-root",
@@ -52,12 +52,12 @@ fun main() {
 }
 ```
 
-### CLI
+## CLI
 ```shell script
 $ sh gradlew generate service --name=app
 ```
 
-### Develop
+## Develop
 Sorry, tools are available only for Linux (may be also MacOS)  
 First you need to setup environment
 ```shell script
@@ -65,18 +65,18 @@ $ bash tools/setup.sh
 $ bash tools/build.sh
 ```
 
-### Contribute
+## Contribute
 All issues and pull requests are welcome.  
 If you need an idea, look for `// todo` comments in code  
 Thank you in advance
 
-### Thanks
+## Thanks
 Special thanks these guys. Awesome job!
-* [MpApt - Kotlin (Native/JS/JVM) Annotation Processor library by @Foso](https://github.com/Foso/MpApt)
-* [Kotling Angular by @Yegair](https://github.com/Yegair/kotlin-angular)
-* [Angular-Kotlin Starter App by @gbaldeck](https://github.com/gbaldeck/angular-kotlin-starter)
+* [MpApt - Kotlin (Native/JS/JVM) Annotation Processor library](https://github.com/Foso/MpApt) by @Foso
+* [Kotling Angular](https://github.com/Yegair/kotlin-angular) by @Yegair
+* [Angular-Kotlin Starter App](https://github.com/gbaldeck/angular-kotlin-starter) by @gbaldeck
 
-### License
+## License
 This project is licensed under the Apache License, Version 2.0  
 See the [LICENSE.txt](https://github.com/Foso/MpApt/blob/master/LICENSE) file for details
 
