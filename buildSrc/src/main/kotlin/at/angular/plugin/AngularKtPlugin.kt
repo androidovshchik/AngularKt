@@ -1,7 +1,6 @@
 package at.angular.plugin
 
-import at.angular.plugin.generate.GComponentTask
-import at.angular.plugin.generate.GenerateTask
+import at.angular.plugin.generate.*
 import org.gradle.api.InvalidUserDataException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -12,18 +11,30 @@ class AngularKtPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         with(project) {
             // todo other cli tasks
-            registerTask<GenerateTask>("generate", "g")
+            registerTasks<GenerateTask>("generate", "g")
+            registerTask<GModuleTask>("module")
+            registerTask<GServiceTask>("service")
             registerTask<GComponentTask>("component")
+            registerTask<GDirectiveTask>("directive")
+            registerTask<GPipeTask>("pipe")
+            registerTask<GGuardTask>("guard")
+            registerTask<GClassTask>("class")
+            registerTask<GInterfaceTask>("interface")
+            registerTask<GEnumTask>("enum")
         }
     }
 
-    private inline fun <reified T : Task> Project.registerTask(vararg names: String) {
+    private inline fun <reified T : Task> Project.registerTasks(vararg names: String) {
         names.forEach {
-            try {
-                tasks.register(it, T::class.java)
-            } catch (e: InvalidUserDataException) {
-                e.printStackTrace()
-            }
+            registerTask<T>(it)
+        }
+    }
+
+    private inline fun <reified T : Task> Project.registerTask(name: String) {
+        try {
+            tasks.register(name, T::class.java)
+        } catch (e: InvalidUserDataException) {
+            e.printStackTrace()
         }
     }
 }
