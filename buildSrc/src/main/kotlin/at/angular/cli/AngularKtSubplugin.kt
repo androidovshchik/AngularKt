@@ -9,7 +9,7 @@ import org.jetbrains.kotlin.gradle.plugin.KotlinGradleSubplugin
 import org.jetbrains.kotlin.gradle.plugin.SubpluginArtifact
 import org.jetbrains.kotlin.gradle.plugin.SubpluginOption
 
-@Suppress("SpellCheckingInspection")
+@Suppress("unused", "SpellCheckingInspection")
 @AutoService(KotlinGradleSubplugin::class)
 class AngularKtSubplugin : KotlinGradleSubplugin<AbstractCompile> {
 
@@ -25,7 +25,7 @@ class AngularKtSubplugin : KotlinGradleSubplugin<AbstractCompile> {
     override fun isApplicable(project: Project, task: AbstractCompile) =
         project.plugins.hasPlugin(AngularKtPlugin::class.java)
 
-    override fun getCompilerPluginId() = "@AngularKt"
+    override fun getCompilerPluginId() = "@AngularKt Compiler"
 
     override fun getPluginArtifact() = SubpluginArtifact(
         groupId = "at.angular",

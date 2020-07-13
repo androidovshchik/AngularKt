@@ -15,7 +15,7 @@ gradlePlugin {
         simplePlugin {
             id = "at.angular.cli"
             displayName = "@AngularKt CLI"
-            description = "A plugin that allows you to write Angular apps with pleasure on Kotlin"
+            description = "The plugin that allows you to write Angular apps with pleasure on Kotlin"
             implementationClass = "at.angular.cli.AngularKtPlugin"
         }
     }

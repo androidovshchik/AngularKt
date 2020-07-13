@@ -2,19 +2,21 @@ package at.angular.cli.generate
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
+import java.io.File
 
-open class GenerateTask : DefaultTask() {
+abstract class GenerateTask : DefaultTask() {
 
-    //private val log = LoggerFactory.getLogger(this::class.java)!!
+    abstract var className: String
+
+    val srcDir: File
+        get() = File(project.projectDir, "src").apply { mkdir() }
 
     init {
         group = "node"
-        description = "Attach Kotlin JAR files to node_modules"
+        description = "Generates and/or modifies files based on a schematic."
     }
 
     @TaskAction
     open fun generate() {
-        //log.info("Starting jar2npm")
-        println("inlineStyle 1")
     }
 }
