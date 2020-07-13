@@ -1,8 +1,8 @@
 package at.angular.cli.generate
 
 import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.options.Option
+import java.io.File
 
 /**
  * @see: https://angular.io/cli/generate#service
@@ -28,8 +28,18 @@ open class GServiceTask : GenerateTask() {
     @get:Input
     var flat = "true"
 
-    @TaskAction
+    init {
+        description = "Creates a new, generic service definition in the given or default project."
+    }
+
     override fun generate() {
-        println("className $className")
+        val code = readTemplate("name.service.txt")
+            .replace("NameService", "${className?.capitalize()}Service")
+        if (flat.toBoolean()) {
+            File(appDir, "a").writeText(readTemplate("name.service.txt"))
+        } else {
+
+        }
+        println("group ${readTemplate("/name.service.txt")}")
     }
 }
