@@ -20,23 +20,23 @@ abstract class GenerateTask : DefaultTask() {
         get() = classPath.split("[/\\\\]".toRegex())
 
     private val filePath: String
-        get() = classParts.dropLast(1).joinToString("/", "/")
+        get() = classParts.dropLast(1).joinToString("/")
 
     protected val fileName: String
         get() = classParts.last().decapitalize()
 
     protected val packageName: String
-        get() = mutableListOf("app", classParts).dropLast(1).joinToString(".")
+        get() = listOf("app").plus(classParts).dropLast(1).joinToString(".")
 
     protected val className: String
-        get() = classParts.last()
+        get() = classParts.last().capitalize()
 
     @TaskAction
     open fun generate() {
     }
 
     protected fun getClassDir(flat: Boolean): File {
-        return File(project.projectDir, "src/app${if (flat) "" else filePath}").apply { mkdir() }
+        return File(project.projectDir, "src/app/${if (flat) "" else filePath}").apply { mkdir() }
     }
 
     protected fun readTemplate(name: String): String {
