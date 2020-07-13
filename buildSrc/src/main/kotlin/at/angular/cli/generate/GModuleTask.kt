@@ -1,10 +1,10 @@
-package at.angular.plugin.generate
+package at.angular.cli.generate
 
 import org.gradle.api.tasks.TaskAction
 
 // todo other options
 @Suppress("UnstableApiUsage")
-open class GServiceTask : GenerateTask() {
+open class GModuleTask : GenerateTask() {
 
     @TaskAction
     override fun generate() {

@@ -11,3 +11,10 @@ external interface Pipe {
 }
 
 external fun Pipe(options: Pipe): (JsClass<*>) -> JsClass<*>
+
+/**
+ * @see: https://angular.io/api/core/PipeTransform
+ */
+external interface PipeTransform {
+    fun transform(value: Any?, vararg args: Any?): Any?
+}

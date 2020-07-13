@@ -13,10 +13,10 @@ apply plugin: "kotlin-kapt"
 gradlePlugin {
     plugins {
         simplePlugin {
-            id = "at.angular.plugin"
-            displayName = "@AngularKt Plugin"
+            id = "at.angular.cli"
+            displayName = "@AngularKt CLI"
             description = "A plugin that allows you to write Angular apps with pleasure on Kotlin"
-            implementationClass = "at.angular.plugin.AngularKtPlugin"
+            implementationClass = "at.angular.cli.AngularKtPlugin"
         }
     }
 }

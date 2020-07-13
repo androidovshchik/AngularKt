@@ -1,4 +1,4 @@
-package at.angular.plugin.generate
+package at.angular.cli.generate
 
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.TaskAction
@@ -21,7 +21,7 @@ open class GComponentTask : GenerateTask() {
 
     @set:Option(
         option = "selector", description = """
-          The HTML selector to use for this component
+          The HTML selector to use for this component.
         """
     )
     @get:Input

@@ -20,7 +20,7 @@ allprojects {
 }
 
 apply plugin: "org.jetbrains.kotlin.js"
-apply plugin: 'at.angular.plugin'
+apply plugin: 'at.angular.cli'
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-js"

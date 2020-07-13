@@ -1,4 +1,4 @@
-package at.angular.plugin
+package at.angular.cli
 
 import com.google.auto.service.AutoService
 import org.gradle.api.Project

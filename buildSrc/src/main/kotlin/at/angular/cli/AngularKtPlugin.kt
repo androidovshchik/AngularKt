@@ -1,6 +1,6 @@
-package at.angular.plugin
+package at.angular.cli
 
-import at.angular.plugin.generate.*
+import at.angular.cli.generate.*
 import org.gradle.api.InvalidUserDataException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
