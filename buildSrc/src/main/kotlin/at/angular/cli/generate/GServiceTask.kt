@@ -36,10 +36,9 @@ open class GServiceTask : GenerateTask() {
         val code = readTemplate("name.service.txt")
             .replace("NameService", "${className?.capitalize()}Service")
         if (flat.toBoolean()) {
-            File(appDir, "a").writeText(readTemplate("name.service.txt"))
+            File(appDir, "$fileName.service.kt").writeText(code)
         } else {
 
         }
-        println("group ${readTemplate("/name.service.txt")}")
     }
 }

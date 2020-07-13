@@ -4,6 +4,9 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 import java.io.File
 
+/**
+ * @see: https://angular.io/cli/generate
+ */
 abstract class GenerateTask : DefaultTask() {
 
     abstract var className: String?
@@ -20,7 +23,13 @@ abstract class GenerateTask : DefaultTask() {
     protected val appDir: File
         get() = File(project.projectDir, "src/app").apply { mkdir() }
 
+    val fileName: String?
+        get() = className?.split("[/.\\\\]".toRegex())?.lastOrNull()?.decapitalize()
+
+    val packages: List<String>
+        get() = className?.split("[/.\\\\]".toRegex())?.dropLast(1).orEmpty()
+
     protected fun readTemplate(name: String): String {
-        return javaClass.getResourceAsStream(name).reader().use { it.readText() }
+        return javaClass.getResourceAsStream("/$name").reader().use { it.readText() }
     }
 }
