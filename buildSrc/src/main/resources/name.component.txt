@@ -17,7 +17,7 @@ import at.angular.lib.Component
     """
     ]
 )
-class Component : OnInit {
+class NameComponent : OnInit {
 
     override fun ngOnInit() {
     }

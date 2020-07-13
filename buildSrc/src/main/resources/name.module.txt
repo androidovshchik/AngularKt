@@ -3,7 +3,7 @@ import at.angular.lib.NgModule
 import at.angular.lib.NgModuleKt
 
 @NgModule
-class Module {
+class NameModule {
 
     companion object : NgModuleKt(
         declarations = emptyArray(),

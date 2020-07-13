@@ -1,0 +1,6 @@
+import at.angular.lib.Directive
+
+@Directive(
+    selector = "[appName]"
+)
+class NameDirective
