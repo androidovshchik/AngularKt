@@ -34,8 +34,8 @@ open class GServiceTask : GenerateTask() {
 
     override fun generate() {
         val code = readTemplate("name.service.txt")
-            .replace("package app", "package app$packageName")
-            .replace("NameService", "${fileName.capitalize()}Service")
+            .replace("package app", "package $packageName")
+            .replace("NameService", "${className}Service")
         File(getClassDir(flat.toBoolean()), "$fileName.service.kt").writeText(code)
     }
 }
