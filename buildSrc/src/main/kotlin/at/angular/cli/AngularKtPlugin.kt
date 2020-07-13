@@ -17,9 +17,6 @@ class AngularKtPlugin : Plugin<Project> {
             registerTask<GComponentTask>("component")
             registerTask<GDirectiveTask>("directive")
             registerTask<GPipeTask>("pipe")
-            registerTask<GClassTask>("class")
-            registerTask<GInterfaceTask>("interface")
-            registerTask<GEnumTask>("enum")
         }
     }
 

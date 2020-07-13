@@ -1,14 +1,17 @@
 ## @AngularKt
-> Write Angular apps with pleasure on Kotlin
+> Write Angular apps with pleasure on Kotlin :relaxed:
 
 Benefits:
 * Kotlin itself
 * Fully customizable webpack
-* Support of [Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
 * Support of [Multiplatform Projects](https://kotlinlang.org/docs/reference/multiplatform.html)
-* Support of [Ktor](https://ktor.io) asynchronous web framework
-* Support of [multiplatform / multi-format reflectionless serialization](https://github.com/Kotlin/kotlinx.serialization)
+* Support of [kotlinx.coroutines][2], [Ktor][3], [kotlinx.serialization][4]
 * Fully customizable CLI
+
+[1]: https://kotlinlang.org/docs/reference/multiplatform.html
+[2]: https://github.com/Kotlin/kotlinx.coroutines
+[3]: https://ktor.io
+[4]: https://github.com/Kotlin/kotlinx.serialization
 
 ### Quick example
 ```kotlin
