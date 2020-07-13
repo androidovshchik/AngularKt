@@ -10,8 +10,7 @@ import at.angular.lib.Component
         </p>
     """,
     styleUrls = ["./name.component.css"],
-    styles = [
-        """
+    styles = ["""
         :host {
           display: block;
         }
