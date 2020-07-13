@@ -1,13 +1,12 @@
-package at.angular.plugin.cli
+package at.angular.plugin.generate
 
-import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.options.Option
 
 // todo other options
 @Suppress("UnstableApiUsage")
-open class GenerateTask : DefaultTask() {
+open class GComponentTask : GenerateTask() {
 
     //private val log = LoggerFactory.getLogger(this::class.java)!!
 
@@ -18,7 +17,7 @@ open class GenerateTask : DefaultTask() {
         """
     )
     @get:Input
-    var prefix: String? = null
+    var prefix = ""
 
     @set:Option(
         option = "selector", description = """
@@ -26,7 +25,7 @@ open class GenerateTask : DefaultTask() {
         """
     )
     @get:Input
-    var selector: String? = null
+    var selector = ""
 
     @set:Option(
         option = "skipSelector", description = """
@@ -35,7 +34,7 @@ open class GenerateTask : DefaultTask() {
         """
     )
     @get:Input
-    var skipSelector = false
+    var skipSelector = "false"
 
     @set:Option(
         option = "inlineTemplate", description = """
@@ -45,7 +44,7 @@ open class GenerateTask : DefaultTask() {
         """
     )
     @get:Input
-    var inlineTemplate = false
+    var inlineTemplate = "false"
 
     @set:Option(
         option = "inlineStyle", description = """
@@ -55,7 +54,7 @@ open class GenerateTask : DefaultTask() {
         """
     )
     @get:Input
-    var inlineStyle = false
+    var inlineStyle = "false"
 
     @set:Option(
         option = "style", description = """
@@ -74,7 +73,7 @@ open class GenerateTask : DefaultTask() {
         """
     )
     @get:Input
-    var displayBlock = false
+    var displayBlock = "false"
 
     init {
         group = "node"
@@ -82,7 +81,7 @@ open class GenerateTask : DefaultTask() {
     }
 
     @TaskAction
-    fun jar2npm() {
+    override fun generate() {
         //log.info("Starting jar2npm")
         println("inlineStyle $inlineStyle")
     }
