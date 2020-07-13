@@ -1,5 +1,6 @@
 package at.angular.plugin
 
+import at.angular.plugin.cli.GenerateTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

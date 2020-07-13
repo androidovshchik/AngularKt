@@ -1,14 +1,24 @@
-package at.angular.plugin
+package at.angular.plugin.cli
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.options.Option
 
+// todo other options
 @Suppress("UnstableApiUsage")
 open class GenerateTask : DefaultTask() {
 
     //private val log = LoggerFactory.getLogger(this::class.java)!!
+
+    @set:Option(
+        option = "prefix", description = """
+          The prefix to apply to the generated component selector.
+          Aliases: -p
+        """
+    )
+    @get:Input
+    var prefix: String? = null
 
     @set:Option(
         option = "selector", description = """
@@ -17,6 +27,15 @@ open class GenerateTask : DefaultTask() {
     )
     @get:Input
     var selector: String? = null
+
+    @set:Option(
+        option = "skipSelector", description = """
+          Specifies if the component should have a selector or not.
+          Default: false
+        """
+    )
+    @get:Input
+    var skipSelector = false
 
     @set:Option(
         option = "inlineTemplate", description = """
@@ -46,6 +65,16 @@ open class GenerateTask : DefaultTask() {
     )
     @get:Input
     var style = "css"
+
+    @set:Option(
+        option = "displayBlock", description = """
+          Specifies if the style will contain :host { display: block; }.
+          Default: false
+          Aliases: -b
+        """
+    )
+    @get:Input
+    var displayBlock = false
 
     init {
         group = "node"
