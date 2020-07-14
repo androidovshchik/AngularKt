@@ -11,7 +11,7 @@ import org.jetbrains.kotlin.gradle.plugin.SubpluginOption
 
 @Suppress("unused", "SpellCheckingInspection")
 @AutoService(KotlinGradleSubplugin::class)
-class AngularKtSubplugin : KotlinGradleSubplugin<AbstractCompile> {
+class CompilerSubplugin : KotlinGradleSubplugin<AbstractCompile> {
 
     override fun apply(
         project: Project,

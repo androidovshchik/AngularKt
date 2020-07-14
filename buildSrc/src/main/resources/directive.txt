@@ -2,7 +2,5 @@ package app
 
 import at.angular.lib.Directive
 
-@Directive(
-    selector = "[appName]"
-)
+@Directive("[appName]")
 class NameDirective
