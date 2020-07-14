@@ -58,12 +58,10 @@ like `companion object : <annotation>Kt` is required
 ## Custom CLI
 As you may have guessed, it is now impossible to use [Angular CLI](https://cli.angular.io).
 The gradle plugin can be used as a replacement, which currently supports
-the `generate` command. For example, in order to generate a component,
-you must execute `$ sh gradlew generate service` or shorter
+the [generate](https://angular.io/cli/generate) command. For example, in order to generate a service,
+you should execute `$ sh gradlew generate service` or shorter
 `$ sh gradlew g service` or even shorter `$ sh gradlew service`
-```shell script
-$ sh gradlew generate service --name=app
-```
+
 
 ## Develop
 Sorry, tools are available only for Linux (may be also MacOS)  
