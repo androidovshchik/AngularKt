@@ -2,7 +2,7 @@
 > Write Angular apps with pleasure on Kotlin :relaxed:
 
 Benefits:
-* Kotlin itself with no `;`, no `this`, `null` safety :sparkles:
+* Kotlin itself :sparkles: with no `;`, no `this`, `null` safety
 * Fully customizable webpack
 * Support of [Multiplatform Projects](https://kotlinlang.org/docs/reference/multiplatform.html)
 * Support of [kotlinx.coroutines][2], [Ktor][3], [kotlinx.serialization][4]
@@ -13,7 +13,7 @@ Benefits:
 [3]: https://ktor.io/clients/http-client/multiplatform.html
 [4]: https://github.com/Kotlin/kotlinx.serialization
 
-## Quick example
+## Basic example
 ```kotlin
 @Component(
     selector = "app-root",
@@ -51,8 +51,16 @@ fun main() {
     AngularKt.bootstrap<AppModule>()
 }
 ```
+Isn't that awesome? By the way, currently kotlin js does not
+support classes in annotations, so somewhere additional code
+like `companion object : <annotation>Kt` is required
 
-## CLI
+## Custom CLI
+As you may have guessed, it is now impossible to use [Angular CLI](https://cli.angular.io).
+The gradle plugin can be used as a replacement, which currently supports
+the `generate` command. For example, in order to generate a component,
+you must execute `$ sh gradlew generate service` or shorter
+`$ sh gradlew g service` or even shorter `$ sh gradlew service`
 ```shell script
 $ sh gradlew generate service --name=app
 ```
@@ -71,6 +79,7 @@ If you need an idea, look for `// todo` comments in code
 Thank you in advance
 
 ## Thanks
+Thanks Google for its great framework  
 Special thanks these guys. Awesome job!
 * [MpApt - Kotlin (Native/JS/JVM) Annotation Processor library](https://github.com/Foso/MpApt) by @Foso
 * [Kotling Angular](https://github.com/Yegair/kotlin-angular) by @Yegair
@@ -78,7 +87,7 @@ Special thanks these guys. Awesome job!
 
 ## License
 This project is licensed under the Apache License, Version 2.0  
-See the [LICENSE.txt](https://github.com/Foso/MpApt/blob/master/LICENSE) file for details
+See the [LICENSE.txt](LICENSE.txt) file for more details
 
 -------
     Copyright 2020 Vlad Kalyuzhnyu
